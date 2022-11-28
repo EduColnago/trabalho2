@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .models import Cars
 from .models import User
+from django import forms
 
 # Create your views here.
 class index(View):
@@ -68,13 +69,19 @@ class editCar(View):
 
     def post(self, request, pk, *args, **kwargs):
         car = get_object_or_404(Cars, pk=pk)
-        # formulario = (request.POST, instance=car)
+        formulario = CarModel2Form(request.POST, instance=car)
 
-        # if formulario.is_valid():
-        #     car = formulario.save()
-        #     car.save()
-        #     return HttpResponseRedirect(reverse_lazy("MyCars:home"))
-        # else:
-        #     contexto = {'car': formulario, }
-        return render(request, 'MyCars/cadastroCarro.html')
-    
+        if formulario.is_valid():
+            car = formulario.save()
+            car.save()
+            return HttpResponseRedirect(reverse_lazy("MyCars:home"))
+        else:
+            car = Cars.objects.all()
+
+
+        return render(request, 'MyCars/inicio.html', {'car' : car})
+
+class CarModel2Form(forms.ModelForm):
+    class Meta:
+        model = Cars
+        fields = '__all__'

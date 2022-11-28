@@ -14,7 +14,9 @@
         <div class="menubar">
             <div class="menu">
                 <div class="logo" href="{% url 'MyCars:home' %}">
-                    <h1>MyCars</h1>
+                    <a href="{% url 'MyCars:home' %}">
+                        <h1>MyCars</h1>
+                    </a>
                 </div>
 
                 <ul>
@@ -25,6 +27,7 @@
         </div>
     </header>
     <form method="POST">
+        {% csrf_token %}
         <div class="screenCenter">
             <div class="centerScreen ml-2">
                 <div class="d-flex justify-content-center m-3">
