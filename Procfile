@@ -1,0 +1,1 @@
+web: gunicorn G2ProgWeb.wsgi
