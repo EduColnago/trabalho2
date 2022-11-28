@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Comprar Carro</title>
+</head>
+<body>
+    <h1>Compra de carro</h1>
+    <form method="POST">
+        {% csrf_token %}
+        Confirma a compra de {{ car.marca }} {{ car.modelo }}?<br>
+        <button>
+            <a href="{% url 'MyCars:home' %}"
+                style="text-decoration: none; color: black;">Cancela</a>
+        </button>
+        <input type="submit" value="Confirmar">
+    </form>
+</body>
+</html>

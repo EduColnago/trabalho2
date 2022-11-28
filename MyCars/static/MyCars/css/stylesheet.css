@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none; 
+  }
+
+body, html{
+  background-color: #eeee;
+  height: 100%;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+
+.menu-icon-open,
+.menu-icon-close {
+    font-size: 1.5rem;
+}
+
+.logo {
+  margin: auto;
+}
+
+.logo :hover {
+  cursor: pointer;
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    margin: auto;
+    color: white;
+}
+
+.menu ul {
+    margin: auto;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-size: bold;
+    color: white;
+}
+
+.menu li:hover {
+    cursor: pointer;
+    border-bottom: 1.4px solid #eeee;
+}
+
+.foto-01 {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.space {
+    margin: 0 2rem;
+    margin-top: 0.1rem;
+}
+
+.space h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-family: 'aldrich';
+}
+
+
+/* cards dos carros */
+
+.cardGrid {
+  height: 100%;
+}
+
+/* login */
+
+.formCenter {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  position: absolute;
+  align-items: center;
+}
+
+form label {
+  font-size: 20px;
+}
+
+form input {
+  size: 30px;
+  margin-bottom: 5px;
+}
+
+form button {
+  size: 30px;
+  align-content: center;
+}
+
+.screenCenter {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerScreen {
+  align-items: center;
+  justify-content: center;
+}
+
+strong, a {
+  width: 15rem;
+}
+
+.observacao_input {
+  width: 500px; 
+  height: 170px
+}
